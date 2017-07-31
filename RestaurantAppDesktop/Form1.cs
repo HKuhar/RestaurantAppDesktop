@@ -43,17 +43,23 @@ namespace RestaurantAppDesktop
 
         private void deleteDishButton_Click(object sender, EventArgs e)
         {
-            RequestHelper.MakeDeleteRequest("http://localhost:51894/api/dishes", GetSelectedDish().Id);
-            currentDishesList = null;
-            RefreshListBoxWithDishes();
+            if (ListBox.SelectedIndex != -1)
+            {
+                RequestHelper.MakeDeleteRequest("http://localhost:51894/api/dishes", GetSelectedDish().Id);
+                currentDishesList = null;
+                RefreshListBoxWithDishes(); 
+            }
         }
 
         private void editDishButton_Click(object sender, EventArgs e)
         {
-            DishForm form = new DishForm(GetSelectedDish());
-            form.ShowDialog();
-            currentDishesList = null;
-            RefreshListBoxWithDishes();
+            if (ListBox.SelectedIndex != -1)
+            {
+                DishForm form = new DishForm(GetSelectedDish());
+                form.ShowDialog();
+                currentDishesList = null;
+                RefreshListBoxWithDishes(); 
+            }
         }
 
         private void SetActiveDishesList()
