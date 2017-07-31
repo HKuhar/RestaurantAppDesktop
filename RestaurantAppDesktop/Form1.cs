@@ -60,7 +60,7 @@ namespace RestaurantAppDesktop
         {
             if (currentDishesList == null)
             {
-                string jsonResult = RequestHelper.makeGetRequest("http://localhost:51894/api/dishes");
+                string jsonResult = RequestHelper.MakeGetRequest("http://localhost:51894/api/dishes");
                 currentDishesList = JsonConvert.DeserializeObject<List<Dishes>>(jsonResult);
             }
         }
@@ -81,7 +81,7 @@ namespace RestaurantAppDesktop
         {
             if (currentOrdersList == null)
             {
-                string jsonResult = RequestHelper.makeGetRequest("http://localhost:51894/api/orders");
+                string jsonResult = RequestHelper.MakeGetRequest("http://localhost:51894/api/orders");
                 currentOrdersList = JsonConvert.DeserializeObject<List<Order>>(jsonResult);
             }
         }

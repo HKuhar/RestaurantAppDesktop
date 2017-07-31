@@ -33,12 +33,12 @@ namespace RestaurantAppDesktop
 
         Dishes dish = null;
 
-        private void addDishCancelButton_Click(object sender, EventArgs e)
+        private void DishFormCancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void addDishDoneButton_Click(object sender, EventArgs e)
+        private void DishFormDoneButton_Click(object sender, EventArgs e)
         {
             
             if (dish == null)
@@ -49,7 +49,7 @@ namespace RestaurantAppDesktop
                 addedDish.Description = descriptionTextBox.Text;
                 addedDish.Price = Convert.ToDecimal(priceTextBox.Text);
 
-                RequestHelper.makePostRequest("http://localhost:51894/api/dishes", addedDish);
+                RequestHelper.MakePostRequest("http://localhost:51894/api/dishes", addedDish);
                 MessageBox.Show("Dish added");
             }
             else
@@ -60,7 +60,7 @@ namespace RestaurantAppDesktop
                 editedDish.Description = descriptionTextBox.Text;
                 editedDish.Price = Convert.ToDecimal(priceTextBox.Text);
 
-                RequestHelper.makePutRequest("http://localhost:51894/api/dishes", editedDish);
+                RequestHelper.MakePutRequest("http://localhost:51894/api/dishes", editedDish);
                 MessageBox.Show("Dish edited");
             }
 

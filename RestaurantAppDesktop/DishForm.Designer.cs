@@ -96,7 +96,7 @@
             this.addDishDoneButton.TabIndex = 8;
             this.addDishDoneButton.Text = "Done";
             this.addDishDoneButton.UseVisualStyleBackColor = true;
-            this.addDishDoneButton.Click += new System.EventHandler(this.addDishDoneButton_Click);
+            this.addDishDoneButton.Click += new System.EventHandler(this.DishFormDoneButton_Click);
             // 
             // addDishCancelButton
             // 
@@ -106,7 +106,7 @@
             this.addDishCancelButton.TabIndex = 9;
             this.addDishCancelButton.Text = "Cancel";
             this.addDishCancelButton.UseVisualStyleBackColor = true;
-            this.addDishCancelButton.Click += new System.EventHandler(this.addDishCancelButton_Click);
+            this.addDishCancelButton.Click += new System.EventHandler(this.DishFormCancelButton_Click);
             // 
             // AddDishForm
             // 

@@ -12,7 +12,7 @@ namespace RestaurantAppDesktop
 {
     static class RequestHelper
     {
-        public static string makeGetRequest(string url)
+        public static string MakeGetRequest(string url)
         {
             string stringResponse = string.Empty;
            
@@ -41,7 +41,7 @@ namespace RestaurantAppDesktop
             return stringResponse;
         }
 
-        public static void makePostRequest(string url, object obj)
+        public static void MakePostRequest(string url, object obj)
         {
             ASCIIEncoding encoding = new ASCIIEncoding();
 
@@ -77,7 +77,7 @@ namespace RestaurantAppDesktop
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
         }
 
-        public static void makePutRequest(string url, object obj)
+        public static void MakePutRequest(string url, object obj)
         {
             ASCIIEncoding encoding = new ASCIIEncoding();
 

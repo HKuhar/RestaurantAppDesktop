@@ -12,9 +12,7 @@ namespace RestaurantAppDesktop
 
         public override string ToString()
         {
-            string returnString = $"Dish Id: {Id}{Environment.NewLine}Name: {Name}{Environment.NewLine}Description: {Description}{Environment.NewLine}Price: {Price}{Environment.NewLine}";
-
-            returnString += Environment.NewLine;
+            string returnString = $"Dish Id: {Id}{Environment.NewLine}Name: {Name}{Environment.NewLine}Description: {Description}{Environment.NewLine}Price: {Price}{Environment.NewLine}{Environment.NewLine}";
 
             return returnString;
         }
