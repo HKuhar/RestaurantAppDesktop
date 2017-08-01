@@ -47,6 +47,7 @@ namespace RestaurantAppDesktop
             {
                 RequestHelper.MakeDeleteRequest("http://localhost:51894/api/dishes", GetSelectedDish().Id);
                 currentDishesList = null;
+                MessageBox.Show("Dish deleted");
                 RefreshListBoxWithDishes(); 
             }
         }
